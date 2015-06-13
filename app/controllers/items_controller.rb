@@ -23,6 +23,26 @@ def create
 redirect_to"/items/#{@item.id}"
 end
 
+def edit
+  #http://localhost:3000/items/5/edit
+  #上のURLの5を取得して、@item = Item.find(5)
+
+@item = Item.find(params[:id])
+
+end
+
+def update
+  # :idでItem.find
+
+@item = Item.find(params[:id])
+@item.update_attributes(item_params)
+@item.save
+redirect_to"/items/#{@item.id}"
+
+  # updateメソッドで上書き保存
+
+end
+
 private
 
 def item_params
