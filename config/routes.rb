@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get 'items/:id' => 'items#show'
   get 'items'=> 'items#index'
 
+
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
